@@ -12,9 +12,14 @@ const Navbar = () => (
             Home
           </Menu.Item>
         </Link>
-        <Link to='user/profile'>
+        <Link to='/user/profile'>
           <Menu.Item>
             {value.username}
+          </Menu.Item>
+        </Link>
+        <Link to='/user/friends'>
+          <Menu.Item>
+            Friends
           </Menu.Item>
         </Link>
       </Menu>  

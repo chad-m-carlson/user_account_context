@@ -26,7 +26,7 @@ class UserForm extends React.Component {
   render() {
     const {username, firstName, lastName,avatar, birthday, email} = this.state;
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit} style={{marginTop: '20px'}}>
         <Form.Group>
           <Form.Input
             label="New Username"
@@ -75,7 +75,7 @@ class UserForm extends React.Component {
           </Form.Group>
           <Form.Button as={StyledButton} 
             onClick={()=>setTimeout(() => {
-              alert('Your Chocies Have Been Saved')
+              alert('Your Changes Have Been Saved')
             }, 500)}
               
               
