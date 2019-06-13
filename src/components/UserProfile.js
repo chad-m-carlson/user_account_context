@@ -2,7 +2,7 @@ import React from 'react';
 import User from './User';
 import UserForm from './UserForm';
 import RandomFriends from './RandomFriends';
-import styled from 'styled-components';
+import {Grid} from '../styles/Styles';
 import {FriendConsumer} from '../providers/FriendProvider';
 
 const UserProfile = () => (
@@ -14,17 +14,14 @@ const UserProfile = () => (
     <FriendConsumer>
       {value => (
         value.friends.map( (f, i) => {
-          if (i >= 3) return;
-          return <RandomFriends key={f.id} {...f} />
+          if (i >= 3) return null;
+          return (<RandomFriends key={f.id} {...f} />)
         })
         )}
     </FriendConsumer>
   </>
 );
 
-const Grid = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+
 
 export default UserProfile;

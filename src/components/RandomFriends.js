@@ -8,7 +8,7 @@ const RandomFriends = (props) => {
   <Feed>
     <Feed.Event as={FeedStyle}>
       <Feed.Label>
-        <img src={avatar} />
+        <img src={avatar} alt=''/>
       </Feed.Label>
       <Feed.Content>
         <p>{name} says: <span style={{fontStyle: 'italic'}}>{sentenceGenerator()}</span></p>

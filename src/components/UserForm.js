@@ -1,7 +1,7 @@
 import React from 'react';
 import {Form, } from 'semantic-ui-react';
 import {UserConsumer, } from '../providers/UserProvider';
-import styled from 'styled-components';
+import {StyledButton, } from '../styles/Styles';
 
 class UserForm extends React.Component {
   state = {
@@ -26,7 +26,7 @@ class UserForm extends React.Component {
   render() {
     const {username, firstName, lastName,avatar, birthday, email} = this.state;
     return (
-      <Form onSubmit={this.handleSubmit} style={{marginTop: '20px'}}>
+      <Form onSubmit={this.handleSubmit} style={{margin: '20px 100px 0px 0px'}}>
         <Form.Group>
           <Form.Input
             label="New Username"
@@ -100,22 +100,7 @@ const ConnectedUserForm = (props) => {
   )
 }
 
-const StyledButton = styled.button`
-    background: #312d2d;
-  color: white;
-  padding: 15px 25px;
-  justify-content: center;
-  transition: background 0.2s ease;
-  cursor: pointer;
-  width: 150px;
-  border-radius: 4px;
-  text-align: center;
 
-  &:hover {
-    background: #606060;
-    transition: background 0.2s ease;
-  }
-`;
 
 const avatarOptions = [
   { key: 1, text: 'Peter', value: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvuaC2zgwok5xKV5m7jwl-9FDSFI6S1rM8HoNR0VOYnss4Wf5Pw"},
