@@ -13,6 +13,7 @@ class FriendForm extends React.Component {
           label="Name"
           type="text"
           name="name"
+          placeholder="This Doesn't Do Anything Yet"
           value={this.state.name}
         />
       </Form>
